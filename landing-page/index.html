@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Landing Page </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Section 1" class="your-active-class">
+      <div class="landing__container">
+        <h2>The Estate</h2>
+        <h3>CONTACT</h3>
+        <p> Bastide du Laval</p>
+        <p>Chemin de la Royère 84160 Cadenet</p>
+        <p>Tél: 04 90 08 95 80</p>
+        <p>Email : contact@bastidedulaval.com</p>
+
+        <h3> OPENING HOURS </h3>
+        <p>The boutique is open every day from Monday to Saturday, (except on Sunday)</p>
+        <p>From January to March :  from 10:00am to 1:00pm and from 3:00pm to 6:00pm</p>
+        <p>From April to December : from 10:00am to 1:00pm and from 3:00pm to 7:00pm</p>
+
+        <h3> DIRECTIONS </h3>
+        <p>GPS :</p>
+        <p>Latitude: 43°44’30.64’’N</p>
+        <p>Longitude: 5°23’44.59’’E</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <h2>Who we are</h2>
+        <img src="https://placebear.com/600/300" alt="placebear"/>
+        <p>This is the story of a couple who dreamed of going back to nature… after an all- consuming career in tourism in both the US and France.</p>
+
+        <p>Roland is the grandson of winemakers in Beaujolais, Carine is the granddaughter of farmers in the Drôme. Despite their agricultural roots, they managed to resist the lure of the land and to follow their passion for entrepreneurial adventure.</p>
+
+        <p>With a background in sport, during the early 80s they built an after- school beach club for children in the Landes. They then decided to move to the States to live the American adventure, living in LA from 85 to 98 where they founded three successful companies with the tourist industry..</p>
+
+        <p>In 1998, they sold everything, their house and companies having fallen in love with a 30 hectare wine estate in Provence, located in the little village of Cadenet in the Luberon.</p>
+
+        <p>For a few months they worked hard at re-organizing the estate, beginning by planting a few thousand trees. And then in 1999, based on their experience in the States, and while the trees were growing, they decided to build Auto-Escape, a company based on a fairly new concept in France: the car- rental business</p>
+
+        <p>The company which prioritized top quality service, developed very quickly and soon fifty employees joined the team based in Pertuis in the Luberon.</p>
+
+        <p>The company soon became the leader in France and attracted investors, so Roland and Carine COUPAT decided to sell up when it went public. The company was then taken over by Expedia.comthe Number 1 worldwide online tourism company.</p>
+
+        <p>In the meantime, the olive trees grew; more trees were planted and today the olive grove is composed of 4000 trees spread over 15 hectares of land.</p>
+
+        <p>At the same time, Carine and Roland patiently studied all the techniques of olive oil production in France and Italy. Roland completed his training by being awarded a diploma in olive oil production in 2010 from the Department of Chemistry of the University of Montpellier.</p>
+
+        <p>The natural conclusion of their journey has been to build an olive Oil Mill, the very heart of the olive oil Industry of a village or a region.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3">
+      <div class="landing__container">
+        <h2>The Mill</h2>
+        <img src="pictures/mill.jpg" alt="Olive oil mill"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Section 4">
+      <div class="landing__container">
+        <h2>Our Awards</h2>
+        <h3>2019</h3>
+          <ul>
+            <li>Gold Medal at the Annual Agricultural show of Paris - black fruity matured olive</li>
+            <li>Silver Medal at the Annual Agricultural show of Paris - green fruity AOC Provence Bio</li>
+            <li>Silver Medal at the Annual Agricultural show of Paris - green fruity AOC Provence Goût Intense</li>
+            <li>Silver Medal at the Annual Agricultural show of Paris - green fruity Huile d'Olive de France Création</li>
+            <li>Silver Medal at the Annual Agricultural show of Paris - green fruity Huile d'Olive de France Création</li>
+            <li>Silver Medal at the National Olives Oil Contest denomination of origin label at Nyons - green fruity AOC Provence</li>
+          </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
